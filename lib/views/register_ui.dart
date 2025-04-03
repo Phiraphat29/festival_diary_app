@@ -47,7 +47,7 @@ class _RegisterUIState extends State<RegisterUI> {
   void showCompleteSnackBar(message) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.green,
         duration: Duration(seconds: 2),
         content: Text(message, textAlign: TextAlign.center),
       ),
