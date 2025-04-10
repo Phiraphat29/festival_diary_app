@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:festival_diary_app/constants/color_constant.dart';
 import 'package:festival_diary_app/model/user.dart';
 import 'package:festival_diary_app/services/user_api.dart';

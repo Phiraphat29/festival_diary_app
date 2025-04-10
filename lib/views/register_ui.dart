@@ -207,7 +207,6 @@ class _RegisterUIState extends State<RegisterUI> {
                           showCompleteSnackBar('ลงทะเบียนไม่สำเร็จ');
                         }
                       }
-                      ;
                     },
                   ),
                   SizedBox(height: 20),
