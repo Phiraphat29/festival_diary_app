@@ -4,7 +4,7 @@ class Fest {
   String? festDetail;
   String? festState;
   int? festNumDay;
-  String? festCost;
+  double? festCost;
   int? userID;
   String? festImage;
   // Constructor เอาไว้แพ็คข้อมูล
@@ -25,7 +25,7 @@ class Fest {
     festDetail = json['festDetail'];
     festState = json['festState'];
     festNumDay = json['festNumDay'];
-    festCost = json['festCost'];
+    festCost = double.parse(json['festCost'].toString());
     userID = json['userID'];
     festImage = json['festImage'];
   }

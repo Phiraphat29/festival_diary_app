@@ -36,7 +36,7 @@ class _LoginUIState extends State<LoginUI> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(mainColor),
+        backgroundColor: Color(mainUserColor),
         foregroundColor: Colors.white,
         centerTitle: true,
         title: Text(
@@ -118,7 +118,7 @@ class _LoginUIState extends State<LoginUI> {
                   SizedBox(height: 40),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(mainColor),
+                      backgroundColor: Color(mainUserColor),
                       fixedSize: Size(MediaQuery.of(context).size.width, 50),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
@@ -175,7 +175,7 @@ class _LoginUIState extends State<LoginUI> {
                         },
                         child: Text(
                           'ลงทะเบียน',
-                          style: TextStyle(color: Color(mainColor)),
+                          style: TextStyle(color: Color(mainUserColor)),
                         ),
                       ),
                     ],

@@ -76,7 +76,7 @@ class _UserUIState extends State<UserUI> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(mainColor),
+        backgroundColor: Color(mainUserColor),
         foregroundColor: Colors.white,
         centerTitle: true,
         leading: IconButton(
@@ -201,7 +201,7 @@ class _UserUIState extends State<UserUI> {
                   SizedBox(height: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(mainColor),
+                      backgroundColor: Color(mainUserColor),
                       fixedSize: Size(MediaQuery.of(context).size.width, 50),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),

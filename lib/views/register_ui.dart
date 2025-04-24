@@ -58,7 +58,7 @@ class _RegisterUIState extends State<RegisterUI> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(mainColor),
+        backgroundColor: Color(mainUserColor),
         foregroundColor: Colors.white,
         centerTitle: true,
         leading: IconButton(
@@ -175,7 +175,7 @@ class _RegisterUIState extends State<RegisterUI> {
                   SizedBox(height: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(mainColor),
+                      backgroundColor: Color(mainUserColor),
                       fixedSize: Size(MediaQuery.of(context).size.width, 50),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
@@ -187,6 +187,7 @@ class _RegisterUIState extends State<RegisterUI> {
                     ),
                     onPressed: () async {
                       // ส่งข้อมูลไปบันทึกที่ฐานข้อมูลผ่าน Backend ที่สร้างไว้
+                      // Validate
                       if (fullNameController.text.trim().isEmpty) {
                         showWarningSnackBar('กรุณากรอกชื่อ-นามสกุล');
                       } else if (usernameController.text.trim().isEmpty) {
@@ -204,7 +205,7 @@ class _RegisterUIState extends State<RegisterUI> {
                         if (await UserApi().registerUser(user, userFile)) {
                           showCompleteSnackBar('ลงทะเบียนสำเร็จ');
                         } else {
-                          showCompleteSnackBar('ลงทะเบียนไม่สำเร็จ');
+                          showWarningSnackBar('ลงทะเบียนไม่สำเร็จ');
                         }
                       }
                     },
